@@ -1,0 +1,37 @@
+create_table "users", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC" do |t|
+  t.string     "name",           limit: 127,           null: false
+  t.string     "email",          limit: 127
+  t.string     "password",       limit: 127,           null: false
+  t.date       "birthday"
+end
+
+create_table "entities", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC" do |t|
+  t.string       "company_name",           limit: 127,           null: false
+end
+
+create_table "items", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC" do |t|
+  t.string     "name",           limit: 127,           null: false
+  t.integer     "origin_rate"
+end
+
+create_table "transaction_types", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC" do |t|
+  t.string     "name",           limit: 127,           null: false
+end
+
+create_table "transactions", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC" do |t|
+  t.bigint     "type_id",        limit: 127,           null: false
+  t.string     "name",           limit: 127,           null: false
+  t.date       "date"
+  t.bigint     "entity_id",                            null: false
+  t.bigint     "user_id",                              null: false
+  t.text       "memo",             limit: 512
+end
+
+create_table "transaction_items", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC" do |t|
+  t.bigint     "transaction_id",                       null: false
+  t.bigint     "item_id",                              null: false
+  t.integer    "quantity"
+  t.integer    "rate",                                 null: false
+  t.integer    "amount",                               null: false
+  t.integer    "line",                                 null: false
+end

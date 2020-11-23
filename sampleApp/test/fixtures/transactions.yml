@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_id: 
+  name: MyString
+  date: 2020-11-23
+  entity_id: 
+  user_id: 
+  memo: MyText
+
+two:
+  type_id: 
+  name: MyString
+  date: 2020-11-23
+  entity_id: 
+  user_id: 
+  memo: MyText
