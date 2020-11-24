@@ -14,10 +14,16 @@ class TransactionsTest < ApplicationSystemTestCase
     visit transactions_url
     click_on "New Transaction"
 
+    fill_in "Amount", with: @transaction.amount
     fill_in "Date", with: @transaction.date
     fill_in "Entity", with: @transaction.entity_id
+    fill_in "Item", with: @transaction.item_id
+    fill_in "Line", with: @transaction.line
+    fill_in "Mainline", with: @transaction.mainline
     fill_in "Memo", with: @transaction.memo
     fill_in "Name", with: @transaction.name
+    fill_in "Quantity", with: @transaction.quantity
+    fill_in "Rate", with: @transaction.rate
     fill_in "Type", with: @transaction.type_id
     fill_in "User", with: @transaction.user_id
     click_on "Create Transaction"
@@ -30,10 +36,16 @@ class TransactionsTest < ApplicationSystemTestCase
     visit transactions_url
     click_on "Edit", match: :first
 
+    fill_in "Amount", with: @transaction.amount
     fill_in "Date", with: @transaction.date
     fill_in "Entity", with: @transaction.entity_id
+    fill_in "Item", with: @transaction.item_id
+    fill_in "Line", with: @transaction.line
+    fill_in "Mainline", with: @transaction.mainline
     fill_in "Memo", with: @transaction.memo
     fill_in "Name", with: @transaction.name
+    fill_in "Quantity", with: @transaction.quantity
+    fill_in "Rate", with: @transaction.rate
     fill_in "Type", with: @transaction.type_id
     fill_in "User", with: @transaction.user_id
     click_on "Update Transaction"

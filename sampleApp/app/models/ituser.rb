@@ -1,2 +1,0 @@
-class Ituser < ApplicationRecord
-end

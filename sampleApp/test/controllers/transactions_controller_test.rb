@@ -17,7 +17,7 @@ class TransactionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create transaction" do
     assert_difference('Transaction.count') do
-      post transactions_url, params: { transaction: { date: @transaction.date, entity_id: @transaction.entity_id, memo: @transaction.memo, name: @transaction.name, type_id: @transaction.type_id, user_id: @transaction.user_id } }
+      post transactions_url, params: { transaction: { amount: @transaction.amount, date: @transaction.date, entity_id: @transaction.entity_id, item_id: @transaction.item_id, line: @transaction.line, mainline: @transaction.mainline, memo: @transaction.memo, name: @transaction.name, quantity: @transaction.quantity, rate: @transaction.rate, type_id: @transaction.type_id, user_id: @transaction.user_id } }
     end
 
     assert_redirected_to transaction_url(Transaction.last)
@@ -34,7 +34,7 @@ class TransactionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update transaction" do
-    patch transaction_url(@transaction), params: { transaction: { date: @transaction.date, entity_id: @transaction.entity_id, memo: @transaction.memo, name: @transaction.name, type_id: @transaction.type_id, user_id: @transaction.user_id } }
+    patch transaction_url(@transaction), params: { transaction: { amount: @transaction.amount, date: @transaction.date, entity_id: @transaction.entity_id, item_id: @transaction.item_id, line: @transaction.line, mainline: @transaction.mainline, memo: @transaction.memo, name: @transaction.name, quantity: @transaction.quantity, rate: @transaction.rate, type_id: @transaction.type_id, user_id: @transaction.user_id } }
     assert_redirected_to transaction_url(@transaction)
   end
 

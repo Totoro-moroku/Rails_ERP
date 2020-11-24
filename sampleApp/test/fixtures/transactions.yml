@@ -3,15 +3,27 @@
 one:
   type_id: 
   name: MyString
-  date: 2020-11-23
-  entity_id: 
-  user_id: 
-  memo: MyText
+  date: MyString
+  entity_id: MyString
+  user_id: MyString
+  memo: MyString
+  mainline: MyString
+  item_id: MyString
+  quantity: MyString
+  rate: MyString
+  amount: MyString
+  line: MyString
 
 two:
   type_id: 
   name: MyString
-  date: 2020-11-23
-  entity_id: 
-  user_id: 
-  memo: MyText
+  date: MyString
+  entity_id: MyString
+  user_id: MyString
+  memo: MyString
+  mainline: MyString
+  item_id: MyString
+  quantity: MyString
+  rate: MyString
+  amount: MyString
+  line: MyString

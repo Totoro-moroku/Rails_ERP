@@ -25,13 +25,14 @@ create_table "transactions", id: :bigint, unsigned: true, force: :cascade, optio
   t.bigint     "entity_id",                            null: false
   t.bigint     "user_id",                              null: false
   t.text       "memo",             limit: 512
+  t.boolean    "mainline"
+  t.bigint     "item_id"
+  t.integer    "quantity"
+  t.integer    "rate"
+  t.integer    "amount"
+  t.integer    "line"
 end
 
-create_table "transaction_items", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC" do |t|
-  t.bigint     "transaction_id",                       null: false
-  t.bigint     "item_id",                              null: false
-  t.integer    "quantity"
-  t.integer    "rate",                                 null: false
-  t.integer    "amount",                               null: false
-  t.integer    "line",                                 null: false
+create_table "sublist_types", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC" do |t|
+  t.string     "name",           limit: 127,           null: false
 end

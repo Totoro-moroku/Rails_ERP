@@ -2,12 +2,6 @@
 
 one:
   name: MyString
-  email: MyString
-  password: MyString
-  birthday: 2020-11-23
 
 two:
   name: MyString
-  email: MyString
-  password: MyString
-  birthday: 2020-11-23

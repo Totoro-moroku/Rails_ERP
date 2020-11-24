@@ -30,5 +30,35 @@
   <%= @transaction.memo %>
 </p>
 
+<p>
+  <strong>Mainline:</strong>
+  <%= @transaction.mainline %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @transaction.item_id %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @transaction.quantity %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @transaction.rate %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @transaction.amount %>
+</p>
+
+<p>
+  <strong>Line:</strong>
+  <%= @transaction.line %>
+</p>
+
 <%= link_to 'Edit', edit_transaction_path(@transaction) %> |
 <%= link_to 'Back', transactions_path %>
