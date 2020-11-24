@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ItuserTest < ActiveSupport::TestCase
+class SublistTypeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

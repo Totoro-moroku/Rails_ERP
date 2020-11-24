@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  resources :itusers
-  resources :transaction_items
+  resources :sublist_types
   resources :transactions
   resources :transaction_types
   resources :items
