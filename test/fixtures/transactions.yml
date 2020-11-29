@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type_id: 
+  entity_id: 
+  date: 2020-11-29
+  user_id: 
+  memo: MyText
+  mainline: false
+  item_id: 
+  quantity: 1
+  rate: 1
+  amount: 1
+  line: 1
+
+two:
+  name: MyString
+  type_id: 
+  entity_id: 
+  date: 2020-11-29
+  user_id: 
+  memo: MyText
+  mainline: false
+  item_id: 
+  quantity: 1
+  rate: 1
+  amount: 1
+  line: 1
