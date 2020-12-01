@@ -10,7 +10,7 @@ RUN apt-get update -qq && \
     nodejs
 
 ##作業ディレクトリ名をAPP_ROOTに割り当てて、以下$APP_ROOTで参照
-ENV APP_ROOT /usr/src/app_back
+ENV APP_ROOT /usr/src/app_server
 WORKDIR ${APP_ROOT}
 
 # ホスト側（ローカル）のGemfileを追加する（ローカルのGemfileは【３】で作成）
