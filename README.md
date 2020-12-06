@@ -62,7 +62,7 @@ docker-compose run server bundle install
 
 - [ridgepole](https://github.com/winebarrel/ridgepole)でschemaの管理をしているため、migrationは使用しません。
 
-- modelをgenerateする場合、下記のように`--skip-migration` を忘れないようにしてください。
+- modelをgenerateする場合、下記ののように`--skip-migration` を忘れないようにしてください。
 
 ```
 docker-compose exec server rails g model {model_name} --skip-migration
