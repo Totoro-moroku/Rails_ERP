@@ -1,14 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
+import Header from '../components/header'
 
-const Index = () => (
-  <div>
-    {/* aタグを<Link>コンポーネントで囲い、hrefなどのリンクの情報は<Link>に渡します。 */}
-    <Link href="/about">
-      <a style={{ fontSize: 20 }}>About Page</a>
-    </Link>
-    <p>Hello Next.js</p>
-  </div>
+const Home = () => (
+  <>
+    <Header />
+    <h1>Hello World!</h1>
+  </>
 )
 
-export default Index
+export default Home
