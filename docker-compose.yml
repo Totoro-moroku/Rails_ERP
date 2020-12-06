@@ -19,13 +19,15 @@ services:
     links:
       - db
 
-  clinet:
-    build: ./clinet
-    command: npm start
+  client:
+    build: ./client
+    command: npm run dev
+    # command: /bin/sh -c "npm run build && npm run start"
     tty: true
     volumes:
-      - ./clinet:/usr/src/app_clinet
-      - /usr/src/app_clinet/app/node_modules
+      - ./client:/usr/src/client
+      - /usr/src/client/node_modules
+      - /usr/src/client/.next
     ports:
       - 8000:8000
     links:
@@ -33,3 +35,4 @@ services:
 
 volumes:
   node_modules:
+  .next:
