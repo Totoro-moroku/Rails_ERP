@@ -31,7 +31,9 @@ client
 ├── Dockerfile
 ├── package.json
 └── src
-     └── pages ← 構成は再度考える
+     ├── components ← 共通部分
+     ├── functions ← 関数
+     └── pages ← 表示
 
 ```
 
